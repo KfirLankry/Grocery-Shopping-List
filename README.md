@@ -17,6 +17,7 @@ Grocery Shopping List is the most easy way to organise your shopping lists. It i
 Development Field: Front-End  
 Live Web: https://shoppinglistsapp.netlify.app/  
 Version: 1.0.0  
+App Language: Hebrew  
 Author: Kfir Lankry
 
 ## Screenshots:
