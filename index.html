@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#212529" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>רשימת קניות</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NavBar -->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">רשימת קניות</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav-link-mobile mt-2" aria-current="page" href="index.html"><i
+                class="fa-solid fa-house"></i> דף הבית</a></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-mobile mt-2" aria-current="page" href="history.html"><i
+                class="fa-solid fa-clock-rotate-left"></i> היסטוריית
+              קניות</a></a>
+          </li>
+          <div class="dropdown text-white mx-3">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              כפיר לנקרי
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item disabled-link" href="#"><i class="fa-solid fa-pen"></i> ערוך פרופיל</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="history.html"><i class="fa-solid fa-clock-rotate-left"></i> היסטוריית
+                  קניות</a>
+              </li>
+              <li>
+                <a class="dropdown-item disabled-link" href="#"><i class="fa-solid fa-right-from-bracket"></i> יציאה</a>
+              </li>
+            </ul>
+          </div>
+          <img id="profile-img" src="imgs/Profile.jpg" alt="" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- todo Content -->
+  <div class="container main" id="main-cont">
+    <div class="shopping-group">
+      <input type="text" id="input" placeholder="הוסף מוצר לרשימת הקניות.." />
+      <button onclick="addToList()" type="button" class="btn btn-success add mx-2">
+        <i class="fa-solid fa-plus"></i> הוסף
+      </button>
+    </div>
+    <p class="p_id text-center text-danger"></p>
+    <div class="image mt-3">
+      <h2 class="empty-text">רשימת הקניות שלך ריקה...</h2>
+      <img class="image-class" src="imgs/list.png" alt="" />
+    </div>
+    <div class="table">
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">המוצר</th>
+            <th scope="col">סטאטוס</th>
+          </tr>
+        </thead>
+        <tbody class="col" id="tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="reset">
+      <button onclick="reset()" type="button" class="btn btn-secondary reset-btn btn-size btn-sm mt-3">
+        <i class="fa-solid fa-arrow-rotate-right"></i> איפוס
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer pb-4 mt-auto">
+    <p class="text-white">
+      קודד ב 🧡 ע"י
+      <a href="https://kfirlankry.netlify.app/" target="_blank">כפיר לנקרי</a>
+      ©
+    </p>
+  </footer>
+
+  <!-- Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
