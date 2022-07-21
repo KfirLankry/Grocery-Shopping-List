@@ -11,6 +11,7 @@ table.style.display = "none";
 resetBtn.style.display = "none";
 indicator = 0;
 
+// Add to list function
 function addToList() {
   if (input.value == "") {
     paragraph.style.display = "block";
@@ -34,6 +35,7 @@ function addToList() {
   console.log(indicator);
 }
 
+// Complete btn function
 function complete(event) {
   event.path[3].style.backgroundColor = "#99f49e";
   event.path[0].innerHTML = `לא בוצע`;
@@ -41,12 +43,14 @@ function complete(event) {
   console.log(event);
 }
 
+// UnComplete btn function
 function uncomplete(event) {
   event.path[3].style.backgroundColor = "transparent";
   event.path[0].innerHTML = `<i class="fa-solid fa-check"> </i> בוצע`;
   event.target.onclick = complete;
 }
 
+// Delete Row btn function
 function deleteRow(event) {
   indicator--;
   event.path[3].remove(event.path[2]);
@@ -56,6 +60,7 @@ function deleteRow(event) {
   }
 }
 
+// Edit btn function
 function edit(event) {
   let edit = prompt("ערוך את המוצר");
   if (edit.length > 18) {
@@ -65,6 +70,7 @@ function edit(event) {
   }
 }
 
+// Reset Function
 function reset() {
   indicator = 0;
   paragraph.style.display = "none";
